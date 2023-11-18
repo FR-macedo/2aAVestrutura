@@ -1,0 +1,54 @@
+package meuPacote;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class gravaArray {
+    public static void main(String[] args) {
+        ArrayList<regpro> registroArray = new ArrayList<>();
+        String caminhoArquivo = "C:\\Users\\01615788\\Desktop\\Francisco Macedo\\Estrutura de Dados\\2aAVestrutura\\Produto.txt";
+        int codigo;
+        String descricao;
+        double valor;
+        int quantidade;
+        int categoria;
+        int contador = 1;
+        try{
+            File arquivo =new File(caminhoArquivo);
+            Scanner scan = new Scanner(arquivo);
+            while(scan.hasNext()){
+                String linha = scan.nextLine();
+                String[] dados = linha.split(";");
+                codigo = Integer.parseInt(dados[0]);
+                descricao = dados[1];
+                valor = Double.parseDouble(dados[2]);
+                valor = valor / 100;
+                quantidade = Integer.parseInt(dados[3]);
+                categoria = Integer.parseInt(dados[4]);
+                registroArray.add(new regpro(codigo, descricao, valor, quantidade,categoria));
+            }
+            //imprime os dados do array
+            for (regpro i: registroArray) {
+                System.out.println("\n");
+                System.out.println("*Item [" + contador + "]" + "da lista*");
+                System.out.println("Código: " + i.getCodigo());
+                System.out.println("Descrição: " + i.getDescricao());
+                System.out.println("Preço: " + i.getPreco());
+                System.out.println("Quantidade: " + i.getQtd());
+                System.out.println("Categoria:" + i.getDescricao());
+                contador++;
+            }
+
+
+        }catch (FileNotFoundException e ){
+            System.out.println("Arquivo não encontrado: " + caminhoArquivo);
+        }
+
+
+
+
+
+
+
+
+    }}
