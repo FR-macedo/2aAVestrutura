@@ -1,4 +1,4 @@
-**Primeira fase do projeto de Estrutura de dados**
+*Primeira fase do projeto de Estrutura de dados*
 
 
 Escolhe o seu grupo (Máximo 4 pessoais), identifique quem são colocando a matricula de o nome de cada um no início do código fonte em Java que deve ser entregue. 
