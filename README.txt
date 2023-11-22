@@ -20,3 +20,4 @@ Atividade:
 Criar um programa que leia o arquivo produto.txt e alimente um arrraylist do objeto regpro. 
 
 Materiais de referência
+https://github.com/FR-macedo/2aAVestrutura
