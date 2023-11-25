@@ -1,8 +1,12 @@
+//1a parte da segunda avaliação de Estrutura de Dados
+//Alunos: Francisco Macedo, Samuel Alexandre, Valdir Pimentel, Luigi Mendes
+//Turma: ADS 2NC
 
+package meuPacote;
 import java.io.*;
 import java.util.*;
 
-public class GravaPilha {
+public class gravaPilha {
     public static void main(String[] args) {
 
         String caminhoArquivo = "\\Produto.txt";
@@ -15,7 +19,7 @@ public class GravaPilha {
         try {
             File arquivo = new File(caminhoArquivo);
             Scanner leitorArquivo = new Scanner(arquivo);
-            Stack<RegPro> registros = new Stack<>();
+            Stack<Regpro> registros = new Stack<>();
 
             while (leitorArquivo.hasNextLine()) {
                 String linha = leitorArquivo.nextLine();
@@ -26,12 +30,12 @@ public class GravaPilha {
                 valor = valor / 100;
                 quantidade = Integer.parseInt(dados[3]);
                 categoria = Integer.parseInt(dados[4]);
-                registros.push(new RegPro(codigo, descricao, valor, quantidade, categoria));
+                registros.push(new Regpro(codigo, descricao, valor, quantidade, categoria));
             }
 
             // imprimir valores para teste
             while (!registros.isEmpty()) {
-                RegPro i = registros.pop();
+                Regpro i = registros.pop();
                 System.out.println("\n");
                 System.out.println("*Item [" + contador + "]" + "da lista*");
                 System.out.println("Código: " + i.getCodigo());
